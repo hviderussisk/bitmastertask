@@ -1,0 +1,29 @@
+@mixin display-flex($direction, $justify, $alignItems)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $alignItems
+
+@mixin animation($name, $dur, $fillmode)
+    -webkit-animation-name: $name
+    animation-name: $name
+    -webkit-animation-duration: #{$dur}s
+    animation-duration: #{$dur}s
+    -webkit-animation-fill-mode: $fillmode
+    animation-fill-mode: both
+
+
+@mixin response($screen)
+    @media all and (max-width: $screen+"px")
+        @content
+
+
+@mixin buttonActionDarkenColor($color)
+    &:hover
+        background: darken($color, 5% )
+    &:focus
+        background: darken($color, 5% )
+    &:active
+        background: darken($color, 5% )
+    &:visited
+        background: darken($color, 5% )

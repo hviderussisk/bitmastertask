@@ -1,0 +1,154 @@
+@import './../../assets/sass/mix.sass'
+@import './../../assets/sass/anim.sass'
+
+*
+  outline: none
+
+body
+  overflow: hidden
+
+.App
+  text-align: center
+  max-width: 1000px
+  margin: 0 auto
+  padding: 20px 50px
+  @include display-flex(column, null, null)
+  @include response(400)
+    padding: 20px 20px
+  .bodyApp
+     @include display-flex(null, null, null)
+     @include response(650)
+        @include display-flex(column, null, null)
+
+
+.rowInput
+  width: 100%
+   @include display-flex(null, null, null)
+  .textinput
+    @include display-flex(null, null, null)
+    width: 100%
+    position: relative
+    overflow: hidden
+    @include response(400)
+      @include display-flex(column, null, null)
+    .error
+      position: absolute
+      right: 20px
+      top: 5px 
+      color: red
+    label
+      font-weight: 600
+      padding: 8px 4px
+      text-align: left
+      margin-right: 10px
+    input 
+      padding: 8px 20px
+      border: none
+      width: 100%
+      border-radius: 10px
+      box-sizing: border-box
+      background: #fafafa
+
+.submit
+  @include display-flex(null, center, center)
+  button 
+    margin-top: 30px
+    border: none
+    padding: 10px 20px
+    border-radius: 3px
+    background: #ffff00
+    color: #020202
+    font-weight: 600
+    cursor: pointer
+    @include buttonActionDarkenColor(#ffff00)
+    &:disabled
+      background: #d3d3d3
+      color: grey
+
+.ymaps-2-1-78-copyrights-pane
+  display: none
+
+.listCar
+  width: 40%
+  padding: 0px 0px 0px 10px
+  overflow: hidden
+  @include response(700)
+    width: 50%
+  @include response(650)
+    width: 100%
+    padding: 20px 0px 0px 0px
+  .bodyCar
+    @include display-flex(null, null, null)
+    padding: 10px
+    background: #fafafa
+    margin-bottom: 6px
+    border-radius: 10px
+    position: relative
+    &:nth-child(1)
+      background: #1cd8d2
+      background: -webkit-linear-gradient(to left, #1cd8d2, #93edc7)
+      background: linear-gradient(to left, #1cd8d2, #93edc7)
+    .iconCar
+      width: 30px
+      height: 30px
+      padding: 9px
+      background:#3ee55a
+      border-radius: 50%
+      @include response(830)
+        width: 25px
+        height: 25px
+    .centerContentCar 
+      padding: 0px 10px
+      @include display-flex(column, center, null)
+      .nameCar 
+        text-align: left
+        font-size: 15px
+        font-weight: 600
+        @include response(830)
+          font-size: 14px
+      .colorCar 
+        text-align: left
+        font-size: 14px
+        font-weight: 600
+        @include response(830)
+          font-size: 13px
+    .distance 
+      font-size: 16px
+      font-weight: 600
+      margin: auto
+      margin-right: 20px
+      @include response(830)
+          font-size: 14px
+          margin-right: 10px
+
+.map
+  overflow: hidden
+  border-radius: 10px
+  width: 600px
+  @include response(950)
+    width: 500px
+  @include response(790)
+    width: 400px
+  @include response(700)
+    width: 300px
+  @include response(650)
+    width: 100%
+
+.form
+  padding: 20px 0px
+  .groupInput
+    @include display-flex(null, null, null)
+  
+@for $i from 1 through 3 
+  .bodyCar 
+    @include animation(bounceInUp, .75, both)
+    &:nth-child(#{$i})
+      animation-delay: $i * .15s
+
+.ymaps-2-1-78-placemark-overlay
+  @include animation(bounceIn, .75, both)
+
+.error
+  @include animation(bounceInRight, .4, both)
+  
+  

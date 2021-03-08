@@ -1,0 +1,30 @@
+{
+    "crews_info" : [
+                {
+                    "crew_id": 1,
+                    "car_mark": "Chevrolet",
+                    "car_model": "Lacetti",
+                    "car_color": "синий",
+                    "car_number": "Е234КУ",
+                    "driver_name": "Деточкин",
+                    "driver_phone": "7788"
+                },{
+                    "crew_id": 2,
+                    "car_mark": "Hyundai",
+                    "car_model": "Solaris",
+                    "car_color": "белый",
+                    "car_number": "Ф567АС",
+                    "driver_name": "Петров",
+                    "driver_phone": "8899"
+                }
+                ,{
+                    "crew_id": 3,
+                    "car_mark": "BMW",
+                    "car_model": "E60",
+                    "car_color": "синий",
+                    "car_number": "К521ЛА",
+                    "driver_name": "Илюха",
+                    "driver_phone": "7220"
+                }
+    ]
+}
