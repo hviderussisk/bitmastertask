@@ -7,6 +7,7 @@ import { point } from '../../assets/Placemark/marker'
 import { Loader } from '../../assets/loader/loader'
 import CarLi from '../elemCar_Component/carLi'
 import { TelCar, PMap } from '../../interfacies/interface'
+import { apikey } from '../../assets/variables'
 
 const App : React.FC = (props: any) => {
 
@@ -65,7 +66,7 @@ const App : React.FC = (props: any) => {
                   <FormTaxi {...propForm}/>
               </div>
               <div className='bodyApp'>
-                  <YMaps query={{apikey: '505379b1-6f2a-446f-af46-102586018d6a'}} >
+                  <YMaps query={{apikey}} >
                     <div className='map'>
                       <Map {...propMap}></Map>
                     </div>
